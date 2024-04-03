@@ -1,4 +1,4 @@
-FROM golang:1.22.1
+FROM golang:1.22.2
 
 ARG TARGETOS
 ARG TARGETARCH
@@ -44,7 +44,7 @@ RUN mkdir -p /go/src/github.com/golang \
   && rm -rf /go/pkg /go/src
 
 RUN set -x \
-  && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b /usr/local/bin v1.56.1
+  && curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b /usr/local/bin v1.57.2
 
 # https://github.com/golangci/golangci-lint/pull/2438#issuecomment-1069262198
 # RUN set -x \
